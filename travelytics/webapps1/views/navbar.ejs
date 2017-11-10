@@ -1,0 +1,63 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+mdl-layout--fixed-header">
+<header class="mdl-layout__header">
+  <div class="mdl-layout__header-row">
+
+    <span id="places_in_location" style="display:none">
+    <button id="demo-menu-lower-left"
+    class="mdl-button mdl-js-button mdl-button--icon">
+    <i class="material-icons">more_vert</i>
+  </button>  Places in <span id="location"></span>
+
+  <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+  for="demo-menu-lower-left" id="place_list">
+  </ul>
+  </span>
+
+    <span id="places_in_itinenary" style="display:none">
+    <button id="demo-menu-lower-left_"
+    class="mdl-button mdl-js-button mdl-button--icon">
+    <i class="material-icons">more_vert</i>
+  </button> Itinerary
+
+  <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+  for="demo-menu-lower-left_" id="place_itinenary">
+  </ul>
+  </span>
+
+  <span id="price" style="padding-left:10px"></span>
+
+    <div class="mdl-layout-spacer"></div>
+    <nav class="mdl-navigation mdl-layout--large-screen-only">
+      <a class="mdl-navigation__link" id="username"></a>
+    </nav>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+    mdl-textfield--floating-label mdl-textfield--align-right">
+    <label class="mdl-button mdl-js-button mdl-button--icon"
+    for="fixed-header-drawer-exp">
+    <i class="material-icons">search</i>
+  </label>
+  <div class="mdl-textfield__expandable-holder">
+    <input class="mdl-textfield__input" type="text" name="sample"
+    id="fixed-header-drawer-exp">
+  </div>
+</div>
+</div>
+</header>
+<div class="mdl-layout__drawer">
+  <span class="mdl-layout-title">Prosair</span>
+  <nav class="mdl-navigation">
+    <a class="mdl-navigation__link" onclick="plan_trip_form()">Plan Trip</a>
+    <a class="mdl-navigation__link" onclick="my_location()">My Locations</a>
+    <a class="mdl-navigation__link" href=""><div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true" data-scope="user_tagged_places,user_friends"></div></a>
+  </nav>
+    <div id="progress_bar" class="mdl-progress mdl-js-progress mdl-progress__indeterminate" style="visibility:hidden"></div>
+    <nav class="mdl-navigation" id="trip_switcher"></nav>
+</div>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+      <div id="map"></div>
+    </div>
+  </main>
+</div>
+</div>

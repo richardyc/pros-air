@@ -1,0 +1,64 @@
+<div class="mdl-layout mdl-js-layout
+mdl-layout--fixed-header">
+<header class="mdl-layout__header">
+  <div class="mdl-layout__header-row">
+    <div class="mdl-layout-title">
+        <img src="http://i68.tinypic.com/xpv79l.jpg">
+    </div>
+    <span id="places_in_location" style="display:none">
+    <button id="demo-menu-lower-left"
+    class="mdl-button mdl-js-button mdl-button--icon">
+    <i class="material-icons">more_vert</i>
+  </button>  Places in <span id="location"></span>
+
+  <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+  for="demo-menu-lower-left" id="place_list">
+  </ul>
+  </span>
+
+    <span id="places_in_itinenary" style="display:none">
+    <button id="demo-menu-lower-left_"
+    class="mdl-button mdl-js-button mdl-button--icon">
+    <i class="material-icons">more_vert</i>
+  </button> Itinerary
+
+  <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+  for="demo-menu-lower-left_" id="place_itinenary">
+  </ul>
+  </span>
+
+  <span id="price" style="padding-left:10px"></span>
+
+    <div class="mdl-layout-spacer"></div>
+    <nav class="mdl-navigation mdl-layout--large-screen-only">
+      <a class="mdl-navigation__link" id="username"></a>
+      <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true" data-scope="user_tagged_places,user_friends"></div>
+    </nav>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+    mdl-textfield--floating-label mdl-textfield--align-right">
+    <label class="mdl-button mdl-js-button mdl-button--icon"
+    for="fixed-header-drawer-exp">
+    <i class="material-icons" onclick="plan_trip_form()">search</i>
+  </label>
+  <div class="mdl-textfield__expandable-holder">
+    <input class="mdl-textfield__input" type="text" name="sample"
+    id="fixed-header-drawer-exp">
+  </div>
+</div>
+</div>
+</header>
+
+<main class="mdl-layout__content">
+  <div class="page-content">
+    <div id="map"></div>
+  </div>
+</main>
+
+<footer class="mdl-mini-footer">
+  <div class="mdl-mini-footer__left-section">
+    <ul class="mdl-mini-footer__link-list" id="trip_switcher">
+    </ul>
+  </div>
+</footer>
+</div>
+</div>

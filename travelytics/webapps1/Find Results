@@ -1,0 +1,10 @@
+Searching 2459 files for "173.236.121.90"
+
+/Users/richardhe/hackathon/travelytics/webapps/module.js:
+   11  	TEXT_EXTRACTION: "https://gateway-a.watsonplatform.net/calls/url/URLGetText?url={url}&outputMode=json&apikey=",
+   12  	RECOMMENDATIONS: "http://localhost:6001/",
+   13:   MS: "http://173.236.121.90:5000/",
+   14    AMADEUS: "http://localhost:5000/"
+   15  };
+
+1 match in 1 file

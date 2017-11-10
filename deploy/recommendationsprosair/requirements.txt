@@ -1,0 +1,7 @@
+Flask==0.11
+
+gunicorn
+Jinja2
+Werkzeug
+distribute
+wsgiref

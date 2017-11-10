@@ -1,0 +1,39 @@
+{
+  "name": "www-aem-checker",
+  "version": "0.1.0",
+  "description": "Dashboard to check if webpages are deployed correctly across different servers.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "latest",
+    "connect-busboy": "latest",
+    "diff": "latest",
+    "ejs": "latest",
+    "exec": "latest",
+    "express": "latest",
+    "geolib": "latest",
+    "jquery": "^3.2.1",
+    "material-design-lite": "latest",
+    "md5": "latest",
+    "mime": "latest",
+    "nedb": "latest",
+    "node-schedule": "latest",
+    "nodemailer": "latest",
+    "urllib": "latest"
+  },
+  "engines": {
+    "node": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.corp.adobe.com/alse/checker"
+  },
+  "keywords": [
+    "dashboard",
+    "node"
+  ],
+  "author": "Suresh Alse",
+  "license": "MIT"
+}

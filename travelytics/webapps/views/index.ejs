@@ -1,0 +1,74 @@
+<!doctype html>
+<head>
+	<title>Dashboard</title>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<script src="jquery.js"></script>
+	<script src="script.js"></script>
+	<script src="index.js"></script>
+	<script src="distance.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<link rel="stylesheet" href="bootstrap.min.css" />
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="material.min.css">
+	<link rel="stylesheet" href="map.css">
+	<script src="material.min.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7UeNd4ucsP6fntC_mkhdbb2bUFVVFqRU&callback=initMap"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script type="text/javascript">
+	var routes = [];
+	$(function () {
+		// initialize tooltips
+		$('[data-toggle="tooltip"]').tooltip();
+		routes = JSON.parse('<%- routes %>');
+		options = JSON.parse('<%- options %>');
+		setTimeout(()=>{
+			document.getElementById("map").style.position = "static";
+			google.maps.event.trigger(document.getElementById("map"), 'resize');
+		}, 1000);
+
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+
+		window.fbAsyncInit = function() {
+			FB.init({
+		      appId      : '322828161491752',
+		      cookie     : true,
+		      xfbml      : true,
+		      version    : 'v2.8'
+			});
+
+			FB.AppEvents.logPageView();   
+
+			FB.getLoginStatus(function(response){
+				FB.Event.subscribe('auth.login', function(response){
+					set_username();
+					put_url_data();
+					console.log(response.status);
+					console.log(response);
+				});
+			});
+		};
+	})
+	</script>
+</head>
+<body>
+	<script>
+		function test(){
+		FB.api('/me/tagged_places', 'get', (data)=>{console.log(data)});
+	}
+
+	function test2(){
+		FB.api("/me/friends", "GET", (data)=>{console.log(data);})
+	}
+	</script>
+	<% include navbar.ejs %>
+	<% include popup.ejs %>
+
+</div>
+</body>
+</html>
